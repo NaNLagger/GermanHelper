@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GermanHelper</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="account_already_exists">Такой аккаунт уже существует</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="login">Войти</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+</resources>
