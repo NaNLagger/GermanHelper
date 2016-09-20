@@ -13,6 +13,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
+import com.nanlagger.germanhelper.Controller
 import com.nanlagger.germanhelper.R
 import com.nanlagger.germanhelper.accounts.GHelperAccount
 import com.nanlagger.germanhelper.accounts.LoginService
@@ -32,7 +33,7 @@ class LoginActivity : AccountAuthenticatorActivity() {
             if (intent.hasExtra(LoginService.USER_KEY) && intent.hasExtra(LoginService.TOKEN_KEY)) {
                 val user = intent.getSerializableExtra(LoginService.USER_KEY) as QBUser
                 val token = intent.getStringExtra(LoginService.TOKEN_KEY)
-                onTokenReceived(GHelperAccount(user.login), user.password, token)
+                onTokenReceived(GHelperAccount(user.email), user.password, token)
             } else {
                 Snackbar.make(
                         rootView,
@@ -81,6 +82,7 @@ class LoginActivity : AccountAuthenticatorActivity() {
             result.putString(AccountManager.KEY_ERROR_MESSAGE, getString(R.string.account_already_exists))
         }
         setAccountAuthenticatorResult(result)
+        Controller.user = account
         setResult(RESULT_OK)
         finish()
     }

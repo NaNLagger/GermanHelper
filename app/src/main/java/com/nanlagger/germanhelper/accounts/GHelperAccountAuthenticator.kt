@@ -16,7 +16,7 @@ class GHelperAccountAuthenticator(val context: Context) : AbstractAccountAuthent
     }
 
     @Throws(NetworkErrorException::class)
-    override fun addAccount(accountAuthenticatorResponse: AccountAuthenticatorResponse, accountType: String, authTokenType: String, strings: Array<String>, options: Bundle): Bundle {
+    override fun addAccount(accountAuthenticatorResponse: AccountAuthenticatorResponse?, accountType: String?, authTokenType: String?, strings: Array<String>?, options: Bundle?): Bundle {
         val result = Bundle()
         result.putParcelable(AccountManager.KEY_INTENT, Intent(context, LoginActivity::class.java))
         return result

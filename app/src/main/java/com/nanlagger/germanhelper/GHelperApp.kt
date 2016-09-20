@@ -1,6 +1,8 @@
 package com.nanlagger.germanhelper
 
 import android.app.Application
+import com.orm.SugarApp
+import com.orm.SugarContext
 import com.quickblox.core.QBSettings
 import okhttp3.OkHttpClient
 
@@ -19,5 +21,6 @@ class GHelperApp : Application() {
         super.onCreate()
         QBSettings.getInstance().init(applicationContext, APP_ID, AUTH_KEY, AUTH_SECRET)
         QBSettings.getInstance().accountKey = ACCOUNT_KEY
+        SugarContext.init(applicationContext)
     }
 }

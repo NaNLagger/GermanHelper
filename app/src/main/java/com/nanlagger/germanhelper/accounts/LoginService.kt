@@ -1,8 +1,6 @@
 package com.nanlagger.germanhelper.accounts
 
-import android.app.IntentService
 import android.app.Service
-import android.content.Context
 import android.content.Intent
 import android.os.AsyncTask
 import android.os.IBinder
@@ -10,9 +8,6 @@ import com.quickblox.auth.QBAuth
 import com.quickblox.core.exception.QBResponseException
 import com.quickblox.users.QBUsers
 import com.quickblox.users.model.QBUser
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import java.util.concurrent.TimeUnit
 
 /**
  * Created by lyashenko_se on 11.08.2016.
